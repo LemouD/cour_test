@@ -1,29 +1,79 @@
 <?php
+
 namespace App;
+
 
 class Calcul
 {
-    public static function add($a, $b)
+    /** @var float $a */
+    private $a;
+
+    /** @var float $b */
+    private $b;
+
+    public function __construct(float $a = 0, float $b = 0)
     {
-        return $a + $b;
+        $this->a = $a;
+        $this->b = $b;
     }
 
-    public static function minus($a, $b)
+    /**
+     * @return float
+     */
+    public function getA(): float
     {
-        return $a - $b;
+        return $this->a;
     }
 
-    public static function multiply($a, $b)
+    /**
+     * @param float $a
+     * @return Calcul
+     */
+    public function setA(float $a): Calcul
     {
-        return $a * $b;
+        $this->a = $a;
+        return $this;
     }
 
-    public static function division($a, $b)
+    /**
+     * @return float
+     */
+    public function getB(): float
     {
-        if($b === 0) {
-            die;
+        return $this->b;
+    }
+
+    /**
+     * @param float $b
+     * @return Calcul
+     */
+    public function setB(float $b): Calcul
+    {
+        $this->b = $b;
+        return $this;
+    }
+
+    public function add(): float
+    {
+        return $this->a + $this->b;
+    }
+
+    public function sub(): float
+    {
+        return $this->a - $this->b;
+    }
+
+    public function mul(): float
+    {
+        return $this->a * $this->b;
+    }
+
+    public function div(): float
+    {
+        if($this->b == 0) {
+            throw new \Exception('Operand 2 must be a non-zero number');
         }
 
-        return $a / $b;
+        return $this->a / $this->b;
     }
 }
