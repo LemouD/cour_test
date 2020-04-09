@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35aaad02-45b0-42c5-8b8a-bebcce00d0b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/UserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Cours_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cours_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calcul.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calcul.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CalculTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CalculTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/UserTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
+            <state relative-caret-position="1997">
               <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
             </state>
           </provider>
@@ -47,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            <state relative-caret-position="306">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="e#26#39#0#PHP" expanded="true" />
               </folding>
@@ -59,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Calcul.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="-162">
               <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
@@ -97,9 +89,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Calculatrice</find>
+      <find>24</find>
     </findStrings>
     <replaceStrings>
       <replace>Calcul</replace>
+      <replace>22</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -154,7 +148,7 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="2083" />
     <option name="y" value="-26" />
     <option name="width" value="1296" />
@@ -193,6 +187,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -235,12 +235,12 @@
       <updated>1586349395106</updated>
       <workItem from="1586349396691" duration="102000" />
       <workItem from="1586349957795" duration="5516000" />
-      <workItem from="1586419711179" duration="1446000" />
+      <workItem from="1586419711179" duration="3409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7064000" />
+    <option name="totallyTimeSpent" value="9027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -306,13 +306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calcul.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/CalculTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -320,17 +313,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calcul.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
+        <state relative-caret-position="1997">
           <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        <state relative-caret-position="306">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="e#26#39#0#PHP" expanded="true" />
           </folding>
