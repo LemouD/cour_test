@@ -23,7 +23,7 @@ class UserTest extends TestCase
         $user = new User('good@email.com', 'Ryan', '', 22);
         $this->assertFalse($user->isValid());
 
-        $user = new User('good@email.com', 'Ryan', 'Lab', 13);
+        $user = new User('good@email.com', 'Ryan', 'Lab', 15);
         $this->assertFalse($user->isValid());
     }
 }
