@@ -1,30 +1,27 @@
 <?php
 
-require('../vendor/autoload.php');
+use App\Kernel;
+use Symfony\Component\ErrorHandler\Debug;
+use Symfony\Component\HttpFoundation\Request;
 
-use App\Calcul;
-Use Test\CalculTest;
+require dirname(__DIR__).'/config/bootstrap.php';
 
-function d(...$values) {
-    foreach($values as $value) {
-        echo '<pre>';
-        var_dump($value);
-        echo '</pre>';
-    }
+if ($_SERVER['APP_DEBUG']) {
+    umask(0000);
+
+    Debug::enable();
 }
 
-function dd(...$values) {
-    d(...$values);
-    die;
+if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? $_ENV['TRUSTED_PROXIES'] ?? false) {
+    Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL ^ Request::HEADER_X_FORWARDED_HOST);
 }
 
+if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? $_ENV['TRUSTED_HOSTS'] ?? false) {
+    Request::setTrustedHosts([$trustedHosts]);
+}
 
-
-$calc = new Calcul();
-
-d($calc->setA(12)->setB(5)->add());
-d($calc->setA(76)->setB(3)->div());
-
-$test = new CalculTest();
-$test->testAdd();
-?>
+$kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+$response->send();
+$kernel->terminate($request, $response);
