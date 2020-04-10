@@ -18,7 +18,7 @@ class ContactTest extends TestCase
         $this -> contact -> setFirstname('toto');
         $this -> contact -> setLastname('foo');
         $this -> contact -> setEmail('toto@mail.com');
-        $this -> contact -> setPhoneNumber('0664157834');
+        $this -> contact -> setPhoneNumber('0644586295');
     }
 
     public function tearDown(): void
@@ -57,13 +57,13 @@ class ContactTest extends TestCase
 
     public function testBadPhoneNumberLen()
     {
-        $this -> contact -> setPhoneNumber('061772347');
+        $this -> contact -> setPhoneNumber('066514234');
         $this->assertFalse($this->contact->isValid());
     }
 
     public function testBadPhoneNumberLetter()
     {
-        $this -> contact -> setPhoneNumber('061772347a');
+        $this -> contact -> setPhoneNumber('066514234a');
         $this->assertFalse($this->contact->isValid());
     }
 
